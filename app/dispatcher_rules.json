@@ -1,0 +1,34 @@
+{
+    "dispatcher_rules":{
+        "1":{
+            "rule_name": "Finance Payment or Invoice issues",
+            "subject_contains": ["Payment", "Invoice", "annexure", "form 16", "refund", "annexure"],
+            "subject_does_not_contains": ["Food Prepared", "Cancelled", "Cancel"],
+            "city": [],
+            "source_is": "Email",
+            "tier": "",
+            "assign_to_group": "PS-Finance",
+            "group_id": 16000080788
+        },
+        "2":{
+            "rule_name": "Payment of cancelled order",
+            "subject_contains": ["Cancel", "Food prepared", "Cancel Order","Cancelled Order", "food ready", "food was ready", "food was prepared", "Canceled"],
+            "subject_does_not_contains": ["Payment,Invoice", "annexure", "form 16", "refund", "annexure"],
+            "city": [],
+            "source_is": "Email",
+            "tier": "",
+            "assign_to_group": "PS CC",
+            "group_id": 16000081389
+        },
+        "3":{
+            "rule_name": "GST - GSTIN Submission",
+            "subject_contains": ["gst"],
+            "subject_does_not_contains": [],
+            "city": [],
+            "source_is": "Email",
+            "tier": "",
+            "assign_to_group": "PS-Finance",
+            "group_id": 16000080788
+        }
+    }
+}
